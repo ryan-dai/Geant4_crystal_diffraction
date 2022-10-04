@@ -1,0 +1,48 @@
+# test03
+#
+/run/numberOfThreads 8
+/run/initialize
+#
+
+
+/process/em/fluo true
+/process/em/auger true
+/process/em/augerCascade true
+/process/em/pixe true
+
+/gps/particle e-
+
+#rectangle Beam source
+/gps/pos/type Beam
+/gps/pos/shape Circle
+/gps/pos/centre 0. 0. -7. mm
+/gps/pos/radius 0.2 mm
+
+# isotropic angular distri.
+/gps/ang/type iso
+/gps/ang/rot1 0. 0. 1.
+/gps/ang/rot2 0. 0. 1.
+
+# power-law energy distr.
+#/gps/ene/type Pow
+#/gps/ene/min 120. keV
+/gps/ene/type Mono
+/gps/ene/mono 120. keV
+/gps/ene/alpha -2.
+
+# commands below are independent of gps
+#
+/analysis/setFileName test03
+/analysis/h1/set 1 100 1 200 keV
+/analysis/h2/set 1 100 -5 5 cm none linear 100 -5 5 cm none linear 
+/analysis/h2/set 4 120 0 360 deg none linear 100 -1 1 none none linear
+#
+#/control/execute vis.mac
+#
+/run/printProgress 10000
+#
+/run/beamOn 2000000
+
+
+
+

@@ -1,0 +1,27 @@
+/run/numberOfThreads 4
+/run/initialize
+/control/verbose 0
+/tracking/verbose 0
+/event/verbose 0
+/gps/verbose 2
+/gps/particle e-
+/gps/pos/type Beam
+/gps/pos/shape Circle
+/gps/pos/centre 0. 0. -7. mm
+/gps/pos/radius 0.2 mm
+/gps/ang/type cos
+/gps/ang/rot1 0. 0. 1.
+/gps/ang/rot2 0. 0. 1.
+/gps/ene/type Lin
+/gps/ene/min 120. keV
+/gps/ene/max 180. keV
+/gps/ene/gradient 1
+/gps/ene/intercept 1
+/analysis/setFileName exgps
+/analysis/h1/set 1 100 200 800 MeV
+/analysis/h2/setX 2 100 -10 10 cm  #y-z
+/analysis/h2/setY 2 100 -10 10 cm  #y-z
+/run/printProgress 100
+
+/run/beamOn 200000
+

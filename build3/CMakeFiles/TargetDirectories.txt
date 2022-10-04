@@ -1,0 +1,4 @@
+/Users/rdai/sim/build3/CMakeFiles/sim.dir
+/Users/rdai/sim/build3/CMakeFiles/Simulation.dir
+/Users/rdai/sim/build3/CMakeFiles/edit_cache.dir
+/Users/rdai/sim/build3/CMakeFiles/rebuild_cache.dir
